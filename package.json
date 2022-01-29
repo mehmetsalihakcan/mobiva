@@ -2,6 +2,7 @@
   "name": "mobiva",
   "version": "0.0.1",
   "private": true,
+  "author": "Mehmet Salih Akcan, akcanmehmetsalih@gmail.com",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -10,8 +11,28 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.17",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
+    "add": "^2.0.6",
+    "axios": "^0.25.0",
     "react": "17.0.2",
-    "react-native": "0.67.1"
+    "react-native": "0.67.1",
+    "react-native-gesture-handler": "^2.2.0",
+    "react-native-paper": "^4.11.2",
+    "react-native-reanimated": "2.2.4",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.10.2",
+    "react-native-status-bar-height": "^2.6.0",
+    "react-native-vector-icons": "^9.0.0",
+    "react-native-webview": "^11.17.1",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-axios-middleware": "^4.0.1",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-filter": "^0.0.20",
+    "redux-thunk": "^2.4.1",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
