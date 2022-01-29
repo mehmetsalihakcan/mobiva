@@ -11,44 +11,45 @@ import WebView from 'react-native-webview';
 
 const ProductDetail = (props) => {
     const post = props && props.route.params.postInfo;
-    console.log('post :',post);
+    //const postImageUrl='https://www.redditstatic.com/gold/awards/icon/silver_512.png';
+    const reactDevUrl='https://reactnative.dev/'; //post.static_icon_url
+
+    console.log('post :', post);
 
     return (
-        <View style={styles.container}>
-          <View style={styles.webviewContainer}>
-       
-      </View>
+        <View style={styles.container} >
+            <WebView
+                style={styles.webview}
+                source={{ uri: reactDevUrl  }}
+                onLoad={() => console.log('Yükleme devam ediyor...')}
+                onLoadStart={() => console.log('Yükleme başladı.')}
+                onLoadEnd={() => console.log('Yükleme bitti.')}
+                onError={() =>
+                    Alert.alert('Hata Oluştu!', 'Dekont indirilirken hata oluştu.', [
+                        { text: 'Tamam', onPress: () => console.log('') },
+                    ])
+                }
+            />
         </View>
     );
 };
 
 /*
- <WebView
-          style={styles.webview}
-          source={{ uri: 'https://reactnative.dev/' }}
-          onLoadEnd={() => helper.hideSpinner()}
-          onLoadStart={() => helper.showSpinner()}
-          onError={() =>
-            Alert.alert('Hata Oluştu!', 'Dekont indirilirken hata oluştu.', [
-              { text: 'Tamam', onPress: () => console.log('') },
-            ])
-          }
-  />
+
 */
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
-        alignItems:'center',
-        backgroundColor: colors.white
+        flex: 1,
+
     },
-    text:{
-        fontSize:sizes.h3,
-        padding:10
+    text: {
+        fontSize: sizes.h3,
+        padding: 10
     },
-    webview:{
-        flex:1,
-        
+    webview: {
+        flex: 1,
+
     }
 });
 
